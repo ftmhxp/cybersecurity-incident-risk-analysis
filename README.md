@@ -20,7 +20,7 @@ Security incident logs with attack patterns, severity levels, and geographic dat
 ### **logins.csv** (3,000 records)
 User authentication attempts with success/failure tracking and IP correlation.
 
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Python**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly
 - **SQL**: SQLite with comprehensive analytics queries
