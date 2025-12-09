@@ -1,0 +1,39 @@
+dataset,field_name,data_type,description,example_value,nullable,primary_key,foreign_key,validation_rules
+incidents_cleaned,event_id,INTEGER,Unique incident identifier,12345,FALSE,TRUE,,Positive integer
+incidents_cleaned,timestamp,DATETIME,Incident occurrence time,2025-01-15 14:30:00,FALSE,FALSE,,Valid datetime format
+incidents_cleaned,event_type,VARCHAR(50),Attack category,Phishing Attempt,FALSE,FALSE,,Predefined categories only
+incidents_cleaned,severity,VARCHAR(20),Impact level,High,FALSE,FALSE,,Low/Medium/High/Critical only
+incidents_cleaned,severity_score,INTEGER,Numeric severity value (1-4),3,FALSE,FALSE,,Range 1-4
+incidents_cleaned,source_ip,VARCHAR(45),Attacker IP address,192.168.1.100,FALSE,FALSE,,Valid IPv4/IPv6 format
+incidents_cleaned,destination_device,VARCHAR(50),Target device identifier,Device-37,FALSE,FALSE,,Non-empty string
+incidents_cleaned,status,VARCHAR(20),Incident outcome,Blocked,FALSE,FALSE,,Successful/Failed/Blocked/Allowed
+incidents_cleaned,location,VARCHAR(50),Geographic origin,China,TRUE,FALSE,,Country name or Unknown
+incidents_cleaned,hour,INTEGER,Hour of incident (0-23),14,FALSE,FALSE,,Range 0-23
+incidents_cleaned,day_of_week,VARCHAR(10),Day name,Monday,FALSE,FALSE,,Valid day name
+incidents_cleaned,is_weekend,BOOLEAN,Weekend indicator,False,FALSE,FALSE,,True/False
+logins_cleaned,login_id,INTEGER,Unique login identifier,67890,FALSE,TRUE,,Positive integer
+logins_cleaned,user_id,VARCHAR(50),User identifier,user123,FALSE,FALSE,,Non-empty string
+logins_cleaned,login_time,DATETIME,Login attempt time,2025-01-15 14:30:00,FALSE,FALSE,,Valid datetime format
+logins_cleaned,success,BOOLEAN,Login outcome,True,FALSE,FALSE,,True/False
+logins_cleaned,ip_address,VARCHAR(45),Login source IP,192.168.1.100,FALSE,FALSE,,Valid IPv4/IPv6 format
+logins_cleaned,hour,INTEGER,Hour of login (0-23),14,FALSE,FALSE,,Range 0-23
+logins_cleaned,day_of_week,VARCHAR(10),Day name,Monday,FALSE,FALSE,,Valid day name
+logins_cleaned,is_weekend,BOOLEAN,Weekend indicator,False,FALSE,FALSE,,True/False
+security_events_merged,source_ip,VARCHAR(45),Common IP address for correlation,192.168.1.100,FALSE,FALSE,,Valid IPv4/IPv6 format
+security_events_merged,incident_event_id,INTEGER,Incident identifier (when correlated),12345,TRUE,FALSE,incidents_cleaned.event_id,Positive integer or NULL
+security_events_merged,incident_timestamp,DATETIME,Incident time,2025-01-15 14:30:00,TRUE,FALSE,,Valid datetime or NULL
+security_events_merged,incident_event_type,VARCHAR(50),Attack type,Phishing Attempt,TRUE,FALSE,,Predefined categories or NULL
+security_events_merged,incident_severity,VARCHAR(20),Incident severity,High,TRUE,FALSE,,Low/Medium/High/Critical or NULL
+security_events_merged,incident_severity_score,INTEGER,Incident severity score,3,TRUE,FALSE,,Range 1-4 or NULL
+security_events_merged,login_login_id,INTEGER,Login identifier (when correlated),67890,TRUE,FALSE,logins_cleaned.login_id,Positive integer or NULL
+security_events_merged,login_time,DATETIME,Login time,2025-01-15 14:30:00,TRUE,FALSE,,Valid datetime or NULL
+security_events_merged,login_success,BOOLEAN,Login success status,True,TRUE,FALSE,,True/False or NULL
+security_events_merged,combined_risk_score,FLOAT,Combined incident+login risk score,7.5,TRUE,FALSE,,Numeric value or NULL
+top_risk_profiles,source_ip,VARCHAR(45),Attacking IP address,192.168.1.100,FALSE,TRUE,,Valid IPv4/IPv6 format
+top_risk_profiles,ensemble_risk_score,FLOAT,Combined risk score (0-100),75.5,FALSE,FALSE,,Range 0-100
+top_risk_profiles,final_risk_level,VARCHAR(20),Risk classification,High,FALSE,FALSE,,Low/Medium/High/Critical
+top_risk_profiles,basic_risk_score,FLOAT,Simple frequency × severity score,45.2,FALSE,FALSE,,Numeric value
+top_risk_profiles,advanced_risk_score,FLOAT,Multi-factor risk score,72.8,FALSE,FALSE,,Numeric value
+top_risk_profiles,temporal_risk_score,FLOAT,Time-weighted risk score,68.3,FALSE,FALSE,,Numeric value
+top_risk_profiles,anomaly_score,FLOAT,Anomaly detection score,2.1,FALSE,FALSE,,Numeric value
+top_risk_profiles,geo_risk_score,FLOAT,Geographic risk score,55.7,FALSE,FALSE,,Numeric value

@@ -1,0 +1,25 @@
+# Cybersecurity Incident Risk Analysis Requirements
+# Install with: pip install -r requirements.txt
+
+# Core data science libraries
+pandas>=1.5.0
+numpy>=1.21.0
+scikit-learn>=1.2.0
+scipy>=1.9.0
+
+# Visualization libraries
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.10.0
+
+# Jupyter notebook
+notebook>=6.5.0
+jupyter>=1.0.0
+
+# Database connectivity (optional)
+sqlite3
+
+# Development and testing
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
