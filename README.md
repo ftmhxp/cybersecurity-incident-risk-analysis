@@ -58,9 +58,9 @@ python scripts/risk_scoring.py
 ## 📁 Project Structure
 
 ```
-cybersecurity-incident-risk-analysis/
-│
-├── data/
+    cybersecurity-incident-risk-analysis/
+    │
+    ├── data/
 │   ├── incidents.csv              # Raw incident data
 │   └── logins.csv                 # Raw login data
 │
@@ -70,12 +70,12 @@ cybersecurity-incident-risk-analysis/
 │
 ├── notebooks/
 │   └── incident_analysis.ipynb    # Comprehensive data analysis
-│
-├── sql/
+    │
+    ├── sql/
 │   ├── create_tables.sql          # Database schema
 │   └── incident_queries.sql       # Analytics queries
 │
-├── dashboard/
+    ├── dashboard/
 │   ├── README.md                  # Power BI setup guide
 │   ├── data/                      # Processed datasets for Power BI
 │   │   ├── incidents_cleaned.csv
