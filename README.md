@@ -2,7 +2,7 @@
 
 This comprehensive project analyzes cybersecurity incident logs to identify threat patterns, calculate risk scores, and visualize attack behavior. It simulates how a Security Operations Center (SOC) monitors and evaluates potential threats using Python, SQL, and Power BI.
 
-## 🎯 Project Purpose
+## Project Purpose
 
 The goal of this project is to perform end-to-end cybersecurity analytics including:
 - Security incident analytics and trend analysis
@@ -12,7 +12,7 @@ The goal of this project is to perform end-to-end cybersecurity analytics includ
 - Geographic threat pattern recognition
 - Actionable security intelligence for SOC teams
 
-## 📊 Datasets Overview
+## Datasets Overview
 
 ### **incidents.csv** (5,000 records)
 Security incident logs with attack patterns, severity levels, and geographic data.
@@ -20,7 +20,7 @@ Security incident logs with attack patterns, severity levels, and geographic dat
 ### **logins.csv** (3,000 records)
 User authentication attempts with success/failure tracking and IP correlation.
 
-## 🛠 Technology Stack
+## Technology Stack
 
 - **Python**: Pandas, NumPy, Scikit-learn, Matplotlib, Seaborn, Plotly
 - **SQL**: SQLite with comprehensive analytics queries
@@ -28,7 +28,7 @@ User authentication attempts with success/failure tracking and IP correlation.
 - **Machine Learning**: Isolation Forest, statistical anomaly detection
 - **Risk Scoring**: Multiple algorithms (basic, advanced, temporal, ensemble)
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Prerequisites
 ```bash
@@ -55,7 +55,7 @@ jupyter notebook notebooks/incident_analysis.ipynb
 python scripts/risk_scoring.py
 ```
 
-## 📁 Project Structure
+## Project Structure
 
 ```
     cybersecurity-incident-risk-analysis/
@@ -89,7 +89,7 @@ python scripts/risk_scoring.py
 └── README.md                      # This file
 ```
 
-## 📈 Key Features
+## Key Features
 
 ### Risk Scoring Engine
 - **Basic Risk**: frequency × severity_weight
@@ -115,7 +115,7 @@ python scripts/risk_scoring.py
 - Missing value handling
 - Outlier detection and treatment
 
-## 📊 Analysis Highlights
+## Analysis Highlights
 
 ### Threat Intelligence
 - **Risk Classification**: Automated Low/Medium/High/Critical scoring
@@ -130,7 +130,7 @@ python scripts/risk_scoring.py
 - Critical incident hotspots
 - Login failure correlation with security events
 
-## 🎯 Power BI Dashboard
+## Power BI Dashboard
 
 Pre-processed datasets are automatically exported for Power BI consumption:
 
@@ -147,7 +147,7 @@ Pre-processed datasets are automatically exported for Power BI consumption:
 - Automated alerting for critical risks
 - Trend forecasting and predictions
 
-## 📋 Usage Examples
+## Usage Examples
 
 ### Basic Data Exploration
 ```python
@@ -181,7 +181,7 @@ top_threats = risk_profile.head(10)
 SELECT * FROM incidents WHERE severity = 'Critical';
 ```
 
-## 🔍 Advanced Analytics
+## Advanced Analytics
 
 - **Time Series Forecasting**: Predict incident volumes
 - **Clustering Analysis**: Group similar attack patterns
@@ -189,7 +189,7 @@ SELECT * FROM incidents WHERE severity = 'Critical';
 - **Predictive Modeling**: Risk score prediction
 - **Anomaly Prediction**: Future threat likelihood
 
-## 📊 Results Summary
+## Results Summary
 
 The analysis typically reveals:
 - **500+ unique attacker IPs** with risk profiles
@@ -198,7 +198,7 @@ The analysis typically reveals:
 - **Geographic hotspots** (China, Russia, Unknown locations)
 - **Risk distribution**: ~20% High/Critical threats requiring immediate attention
 
-## 🤝 Contributing
+## Contributing
 
 This is a portfolio project demonstrating cybersecurity analytics capabilities. For enhancements:
 1. Add new risk scoring algorithms
@@ -206,10 +206,3 @@ This is a portfolio project demonstrating cybersecurity analytics capabilities. 
 3. Create custom Power BI visualizations
 4. Add predictive analytics features
 
-## 📄 License
-
-Portfolio project - feel free to use as reference for cybersecurity analytics implementations.
-
----
-
-**Ready to analyze threats?** Start with `python scripts/preprocess.py` and explore `notebooks/incident_analysis.ipynb` for comprehensive insights.
