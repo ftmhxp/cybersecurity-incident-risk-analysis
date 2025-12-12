@@ -198,11 +198,3 @@ The analysis typically reveals:
 - **Geographic hotspots** (China, Russia, Unknown locations)
 - **Risk distribution**: ~20% High/Critical threats requiring immediate attention
 
-## Contributing
-
-This is a portfolio project demonstrating cybersecurity analytics capabilities. For enhancements:
-1. Add new risk scoring algorithms
-2. Implement additional ML models
-3. Create custom Power BI visualizations
-4. Add predictive analytics features
-
