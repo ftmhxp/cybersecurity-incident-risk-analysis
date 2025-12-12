@@ -2,11 +2,11 @@
 
 This directory contains data preparation files and documentation for Power BI dashboard development.
 
-## 📊 Dashboard Overview
+## Dashboard Overview
 
 The Power BI dashboard will visualize cybersecurity incident data, risk scores, and threat patterns to support security operations center (SOC) decision-making.
 
-## 📁 Directory Structure
+## Directory Structure
 
 ```
 dashboard/
@@ -19,7 +19,7 @@ dashboard/
 └── README.md            # This file
 ```
 
-## 📋 Data Sources
+## Data Sources
 
 ### 1. incidents_cleaned.csv
 **Purpose**: Primary security incident data with enhanced features
@@ -73,7 +73,7 @@ dashboard/
 - `anomaly_score`: Anomaly detection score
 - `geo_risk_score`: Geographic risk score
 
-## 🎯 Recommended Dashboard Pages
+## Recommended Dashboard Pages
 
 ### 1. Executive Summary
 - **KPIs**: Total incidents, success rate, critical incidents, active threats
@@ -100,7 +100,7 @@ dashboard/
 - **Brute Force Detection**: Failed login patterns
 - **User Behavior**: Anomalous login activity
 
-## 📈 Key Visualizations
+## Key Visualizations
 
 ### Charts & Graphs
 1. **Line Chart**: Daily incident volume with severity overlay
@@ -124,7 +124,7 @@ dashboard/
 3. **Location Summary**: Geographic risk summary
 4. **Trend Analysis**: Period-over-period comparisons
 
-## 🔧 Power BI Setup Instructions
+## Power BI Setup Instructions
 
 ### 1. Data Import
 1. Open Power BI Desktop
@@ -169,7 +169,7 @@ Daily Incidents = CALCULATE(
 - Add data slicers for date ranges, locations, and event types
 - Implement drill-through pages for detailed IP analysis
 
-## 🚨 Automated Alerts Setup
+## Automated Alerts Setup
 
 Configure alerts for:
 - New critical-risk IPs (ensemble_risk_score > 80)
@@ -177,7 +177,7 @@ Configure alerts for:
 - High-severity incident clusters
 - Anomalous behavior detection
 
-## 📊 Dashboard Refresh
+## Dashboard Refresh
 
 ### Manual Refresh
 1. Open Power BI Desktop
@@ -190,7 +190,7 @@ Configure alerts for:
 3. Set up scheduled refresh (hourly/daily)
 4. Configure data alerts
 
-## 🔍 Advanced Analytics
+## Advanced Analytics
 
 ### Custom Calculations
 - **Risk Velocity**: Rate of risk score increase
@@ -203,7 +203,7 @@ Configure alerts for:
 - **Risk Prediction**: Machine learning-based risk scoring
 - **Anomaly Prediction**: Future anomaly likelihood
 
-## 📋 Data Dictionary
+## Data Dictionary
 
 | Field | Type | Description | Example |
 |-------|------|-------------|---------|
@@ -218,7 +218,7 @@ Configure alerts for:
 | ensemble_risk_score | Float | Combined risk score | 75.5 |
 | final_risk_level | String | Risk classification | "High" |
 
-## 🎯 Success Metrics
+## Success Metrics
 
 - **Dashboard Usage**: Regular access by security team
 - **Response Time**: Time to investigate alerts
@@ -226,14 +226,14 @@ Configure alerts for:
 - **Threat Detection**: Critical threats identified and mitigated
 - **Incident Reduction**: Trend in incident volume over time
 
-## 📞 Support
+## Support
 
 For questions about dashboard development or data interpretation:
 1. Refer to the analysis notebook (`notebooks/incident_analysis.ipynb`)
 2. Check the SQL queries (`sql/incident_queries.sql`)
 3. Review the preprocessing scripts (`scripts/`)
 
-## 🔄 Update Process
+## Update Process
 
 1. Run data preprocessing scripts to generate new datasets
 2. Execute analysis notebook for updated insights
